@@ -214,7 +214,7 @@ class ArteTVIE(ArteTVBaseIE):
         return {
             'id': metadata['providerId'],
             'webpage_url': traverse_obj(metadata, ('link', 'url')),
-            'title': traverse_obj(metadata, 'subtitle', 'title'),
+            'title': traverse_obj(metadata, 'title', 'subtitle'),
             'alt_title': metadata.get('subtitle') and metadata.get('title'),
             'description': metadata.get('description'),
             'duration': traverse_obj(metadata, ('duration', 'seconds')),
